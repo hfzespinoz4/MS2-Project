@@ -6,7 +6,7 @@ function charactersNotificationClean(message){
 }
 
 function charactersResultsClean(){
-    let character = document.querySelectorAll("character-item");
+    let character = document.querySelectorAll(".character-item");
     let li;
     for (let i=0; li=character[i]; i++){
         li.parentNode.removeChild(li);
