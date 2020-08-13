@@ -45,29 +45,32 @@ function comicSearch(){
         notificationClean("");
         apiResponse.data.results.map((comic, index) =>{
             comicsNotification.innerText = `There are ${index +1} results for your search`;
+            // Then, append API response to our HTML
             $("#comics-list").append(`
-            <li class="comic-item mt-2 mb-2">
-                <div class="d-flex comic-container">
-                    <img src=${comic.thumbnail.path}.${comic.thumbnail.extension} class="comic-avatar">
-                    <div class="ml-2" class="comic-details ml-2">
-                        <h3>${comic.title}</h3>
-                        <h6>ID: ${comic.id}  ISSN: ${comic.issn}  ISBN: ${comic.isbn}</h6>
-                        <p> Total Pages: ${comic.pageCount}
-                        <p> Series: ${comic.series.name}</p>
-                        <p> Description: ${comic.description}</p>
-                        <p> Creation Date: ${comic.dates[1].date} </p>
-                        <p> On-Sale Date: ${comic.dates[0].date} </p>
+                <li class="results-item mt-2 mb-2">
+                    <div class="d-flex comic-container">
+                        <img src=${comic.thumbnail.path}.${comic.thumbnail.extension} class="comic-avatar">
+                        <div class="ml-2" class="comic-details ml-2">
+                            <h3>${comic.title}</h3>
+                            <h6>ID: ${comic.id}  ISSN: ${comic.issn}  ISBN: ${comic.isbn}</h6>
+                            <p> Total Pages: ${comic.pageCount}
+                            <p> Series: ${comic.series.name}</p>
+                            <p> Description: ${comic.description}</p>
+                            <p> Creation Date: ${comic.dates[1].date} </p>
+                            <p> On-Sale Date: ${comic.dates[0].date} </p>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
             `);  
         }); //Closing Map
+        $("body").css("height", "100%");
     } //Closing comicInfo function
 }//Closing comicSearch function
 
 //Making a API Call when Search button is clicked
 comicSearchButton.addEventListener('click', function(event){
     event.preventDefault();
+    // 
     resultsClean();
     comicSearch();
     $("#comic-name").val('').focus();

@@ -1,0 +1,65 @@
+/* General Styles */
+
+body{
+    background: linear-gradient(to bottom, #ec1d24, #1f1f20 18%);
+    background: -moz-linear-gradient(to bottom, #ec1d24, #1f1f20 18%);
+    color: white;
+    height: 668px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img{
+    max-width: 8rem;
+    max-height: 4rem;
+}
+
+.nav-item .nav-link{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+}
+
+footer p{
+    margin:0;
+}
+
+/* Comic Page Styles */
+
+.results-item{
+    list-style-type: none;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: rgba(236, 29, 36, .5);
+    color: white;
+    box-shadow: 0 5px 15px -5px rgba(255, 255, 255, .2);
+}
+ .comic-avatar{
+    max-width: 12rem;
+    min-width: 12rem;
+    max-height: auto;
+    min-height: 18rem;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+#comic-notification{
+    font-size: 15px;
+    font-weight: bold;
+}
+
