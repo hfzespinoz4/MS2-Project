@@ -1,4 +1,3 @@
-// const comicsList = document.getElementById("comics-list");
 const comicsNotification = document.getElementById("comic-notification");
 const comicSearchButton  = document.getElementById("comic-search");
 
@@ -49,8 +48,8 @@ function comicSearch(){
             $("#comics-list").append(`
                 <li class="results-item mt-2 mb-2">
                     <div class="d-flex comic-container">
-                        <img src=${comic.thumbnail.path}.${comic.thumbnail.extension} class="comic-avatar">
-                        <div class="ml-2" class="comic-details ml-2">
+                        <img src=${comic.thumbnail.path}.${comic.thumbnail.extension} class="avatar">
+                        <div class="comic-details ml-2">
                             <h3>${comic.title}</h3>
                             <h6>ID: ${comic.id}  ISSN: ${comic.issn}  ISBN: ${comic.isbn}</h6>
                             <p> Total Pages: ${comic.pageCount}
@@ -70,7 +69,6 @@ function comicSearch(){
 //Making a API Call when Search button is clicked
 comicSearchButton.addEventListener('click', function(event){
     event.preventDefault();
-    // 
     resultsClean();
     comicSearch();
     $("#comic-name").val('').focus();

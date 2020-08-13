@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav justify-content-between ml-auto">
                         <li class="nav-item">
-                             <a class="nav-link" href="index.html">Characters<span class="sr-only">(current)</span></a>
+                             <a class="nav-link active" href="index.html">Characters<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./comics.html">Comics</a>
@@ -50,14 +50,21 @@
                 <h2 class="text-center">Character Search</h2>
                 <div class="row">
                     <div class="col-12 col-sm-12">   
-                        
+                        <br>
+                        <div class="col-8 col-sm-12 col-md-8 mx-auto justify-content-center">
+                            <input type="text" id="character-name" class="form-control form-block" placeholder="Please enter a Character name">
+                            <br>
+                            <button id="character-search" class="btn btn-danger d-flex justify-content-center mx-auto">Search Character</button>
+                            <br>
+                            <p id="character-notification" class="text-center mt-5 mb-5"></p>
+                        </div>                        
                     </div>
                 </div>
             </section>
             <section>
                 <div class="row">
                     <div class="col">
-                        <ul></ul>
+                        <ul id="characters-list"></ul>
                     </div>
                 </div>
             </section>
@@ -76,6 +83,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <!-- Personal Script -->
-        <script src="assets/js/comics.js"></script>
+        <script src="assets/js/characters.js"></script>
     </body>
 </html>

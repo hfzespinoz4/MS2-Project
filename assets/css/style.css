@@ -48,7 +48,7 @@ footer p{
     color: white;
     box-shadow: 0 5px 15px -5px rgba(255, 255, 255, .2);
 }
- .comic-avatar{
+ .avatar{
     max-width: 12rem;
     min-width: 12rem;
     max-height: auto;
