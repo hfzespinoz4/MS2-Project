@@ -37,9 +37,9 @@ function seriesSearch(){
         apiResponse.data.results.map((serie, index) =>{
             seriesNotification.innerText = `There are ${index+1} results for your search`;
             $("#series-container").append(`
-                <div class="serie-item mt-2 mb-2">
+                <div class="results-item mt-2 mb-2" col-12 col-sm-12 col-md-4 col-lg-4>
                     <div class="d-flex">
-                        <img class="${serie.thumbnail.path}.${serie.thumbnail.extension}">
+                        <img src="${serie.thumbnail.path}.${serie.thumbnail.extension}" class="avatar">
                         <div class="ml-2 comic-details">
                             <h3>${serie.title}</h3>
                             <h6>${serie.id}</h6>

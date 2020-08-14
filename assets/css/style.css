@@ -4,7 +4,8 @@ body{
     background: linear-gradient(to bottom, #ec1d24, #1f1f20 18%);
     background: -moz-linear-gradient(to bottom, #ec1d24, #1f1f20 18%);
     color: white;
-    height: 668px;
+    min-height: 100vh;
+    max-height: 100%;
 }
 
 a{
@@ -12,14 +13,19 @@ a{
     text-decoration: none;
 }
 
+h1{
+    font-size: 2rem;;
+}
+
 a:hover{
     text-decoration: none;
     color: white;
+    
 }
 
 .logo-img{
     max-width: 8rem;
-    max-height: 4rem;
+    max-height: 3rem;
 }
 
 .nav-item .nav-link{
@@ -30,6 +36,10 @@ a:hover{
 
 .active{
     font-weight: bold;
+}
+
+#nav-list{
+    color: white;
 }
 
 footer p{

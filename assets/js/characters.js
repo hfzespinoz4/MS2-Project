@@ -1,7 +1,7 @@
 const characterNotification = document.getElementById("character-notification");
 
 function charactersNotificationClean(message){
-    $("#character-notification").append("")
+    $("#character-notification").val("");
     $("#character-notification").append(message);
 }
 
@@ -28,7 +28,8 @@ function characterSearch(){
             charactersNotificationClean(error);
         });   
     } else {
-        charactersNotificationClean("please enter a character name");
+        characterNotification.innerText= "";
+        characterNotification.innerText= "please enter a character name";
     }
     return;
 

@@ -3,17 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Adding Styles -->
         <!-- Adding Bootstrap to the project -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <!-- Adding Personal Styles to the Project -->
         <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+         
+        <!-- Adding EmailJS -->
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+         <script type="text/javascript">
+            (function(){
+                emailjs.init("user_7yFD4CIEwOv4SbZYl3FfL");
+            })();
+         </script>
         <title>Contact - Marvel Search Tool</title>
     </head>
     <body class="container">
         <!-- Header Section -->
         <header>
             <!-- This navbar is from bootstrap template -->
-            <nav class="navbar navbar-expand-lg navbar-light d-flex ">
+            <nav class="navbar navbar-expand-lg navbar-dark d-flex ">
                 <a href="index.html" class="d-flex">
                     <img src="./assets/images/Marvel-Comics-Logo.svg" alt="logo.img" class="logo-img logo">
                     <h1>Search Tool</h1>
@@ -22,7 +32,7 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNav">
-                    <ul class="navbar-nav justify-content-between ml-auto">
+                    <ul class="navbar-nav justify-content-between ml-auto" id="nav-list">
                         <li class="nav-item">
                              <a class="nav-link" href="index.html">Characters</a>
                         </li>
@@ -47,25 +57,38 @@
                 <h2 class="text-center">Contact Us!</h2>
                 <div class="row">
                     <div class="col-12 col-sm-12">   
-                        
+                        <form class="form" id="contact-form" >
+                            <div class="col-12-col-sm-12 col-md-8 mx-auto">
+                                <div class="mt-1 form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="name" id="name" placeholder="your-name" class="form-control form-block" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" placeholder="you@your.email" class="form-control form-block" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control form-block" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="textarea">Message:</label>
+                                    <textarea name="message" id="message" cols="30" rows="3" class="form-control form-block" required></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-danger" id="submit-button">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="contact-notification" class="mt-2 mb-1 text-center col-12 col-sm-12 col-md-8 mx-auto"></div>
                     </div>
                 </div>
-            </section>
-            <section>
-                <div class="row">
-                    <div class="col">
-                        <ul></ul>
-                    </div>
-                </div>
-            </section>
-            <section>
-
             </section>
         </main>
-        <footer>
+        <footer class="mt-3">
             <p class="text-center">Developed by Harvin Zúniga - Using <a href="https://developer.marvel.com">Marvel API</a></p>
             <p class="text-center">All content is property of Marvel Comics</p>
-        </footer>
+        </footer> 
         <!-- script section -->
         <!-- jQuery CDN -->
         <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -73,6 +96,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <!-- Personal Script -->
-        <script src="assets/js/comics.js"></script>
+        <script src="assets/js/contact.js"></script>
     </body>
 </html>
